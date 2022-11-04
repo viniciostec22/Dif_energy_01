@@ -5,14 +5,11 @@
 
 
 {% block 'dashboard'%}
-<form action="method">
-    {% csrf_token %}    
-    {% bootstrap_form forms %}
-    {% bootstrap_form forms %}
-</form>
 
 
-<form action="" autocomplete="off">  
+
+<form action="" autocomplete="off" method="POST">  
+    {%csrf_token%}
     <table class="table table-borderless table-hover">
     <thead class="table-dark">
         <tr>
