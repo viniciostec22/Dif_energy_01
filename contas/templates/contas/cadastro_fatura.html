@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block 'dashboard'%}
+<form action="method">
+    {% csrf_token %}    
+    {% bootstrap_form forms %}
+    {% bootstrap_form forms %}
+</form>
+
+
+<form action="" autocomplete="off">  
+    <table class="table table-borderless table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Descrição</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Preço(R$)</th>
+            <th scope="col">Valor(R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="table-dark">Demanda Ativa (Kw)</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Demanda Complementar (Kw)</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Demanda de Ultrapassagem (Kw)</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Demanda Reativa Excedente (Kw) </td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Ativo na Ponta (Kwh)-TUSD</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Ativo Fora da Ponta (Kwh)-TUSD</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Ativo RESERVADO (Kwh)-TUSD</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Ativo na Ponta (Kwh)-TE</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Ativo Fora da Ponta (Kwh)-TE</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Ativo RESERVADO (Kwh)-TE</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark">Consumo Reativo Excedente na Ponta Kwh-ex</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark"> Ponta Kwh-ex</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+        <tr>
+            <td class="table-dark"> Consumo Reativo Excedente Reservado Kwh-ex</td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+            <td><input class="form-control" type="text"></td>
+        </tr>
+    </tbody>
+    </table>
+    <table class="table table table-borderless  table-sm">
+    <tbody>
+        <tr>
+            <td class="table-dark"><span>Multa (R$)</span>
+            <input class="form-control" type="text"></td>
+            <td class="table-dark"><span>Juros (R$)</span>                       
+            <input class="form-control" type="text"></td>
+            <td class="table-dark">Devolução Res 024/ANEEL (R$)
+            <input class="form-control" type="text"></td>
+        
+        </tr>                  
+        
+        <tr>
+            <td class="table-dark">Parcelamento (R$)
+            <input class="form-control" type="text"></td>
+            <td class="table-dark">Outros (R$)
+            <input class="form-control" type="text"></td>
+            <td class="table-dark">Total Geral (R$)
+            <input class="form-control" type="text"></td>
+        </tr>                    
+    </tbody>
+    </table>
+    <div class="container-btn">
+    <input class="btn btn-primary btn-success" type="submit" value="Salvar">
+    <input class="btn btn-primary btn-danger" type="reset" value="Cancelar">
+    </div
+</form>   
+{% endblock %}
+
